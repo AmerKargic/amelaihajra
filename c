@@ -22,7 +22,26 @@ void ispisNiza (int A[] ){
 	}
 	cout <<"}"; 
 }
+void ispisObrnuto(int A[]){
+		size_t n = sizeof(A)/sizeof(A[0]);
+		cout <<"\nObrnuto ispissani clanovi niza:{";
+	for (int i = n - 1; i >= 0; i--){
+		cout <<A[i]<<", "; 
+	}
+	cout <<"}";
+}
+void najveci(int A[]){
+	
+	size_t n = sizeof(A)/sizeof(A[0]);
+	for(int i = 0;i < n; ++i) {
 
+   
+    if(A[0] < A[i])
+      A[0] = A[i];
+  }
+
+  cout << endl << "Najveci clan niza je:  " << A[0];
+}
 int main()
 {
 	
@@ -30,8 +49,8 @@ int main()
 	int B[0], b;
 	unosNiza(B , b); 
 	ispisNiza(B);
-	
-	
+	ispisObrnuto(B);
+	najveci(B);
 	return 0; 
 	
 }
