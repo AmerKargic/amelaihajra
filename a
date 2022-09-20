@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std; 
+
+int main(){
+	int random;
+	int brojacpar = 0, brojacnepar = 0; 
+	int suma = 0 ;
+	while(suma<1000) {
+	 random = rand()%(76-23 + 1) + 23;
+	cout <<"\n"<< random; 
+	suma+= random; 
+	if (random%2 == 0){
+		brojacpar ++; 
+	}else 
+	{
+		brojacnepar++; 
+	}
+}
+	cout<< "\nSuma je dostigla 1000"; 
+	cout<<"\nParnih brojeva je generisano: "<<brojacpar; 
+	cout<<"\nNeparnih brojeva je generisano: "<<brojacnepar;
+	return 0;
+}
