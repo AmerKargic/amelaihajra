@@ -1,0 +1,72 @@
+
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+void unosNiza(int A[], int a ){
+	int brcl; 
+	
+	for(int i= 0; i<a; i++){
+		cout <<"Unesite "<<i+1<<". clan niza: "; 
+		cin >>brcl;
+		A[i]= brcl; 
+	} 
+}
+void ispisNiza (int A[], int a  ){
+	
+	
+		cout <<"Clanovi niza su:{";
+	for (int i=0; i<a; i++){
+		cout <<A[i]<<", "; 
+	}
+	cout <<"}"; 
+}
+void ispisObrnuto(int A[], int a){
+		
+		cout <<"\nObrnuto ispissani clanovi niza:{";
+	for (int i = a - 1; i >= 0; i--){
+		cout <<A[i]<<", "; 
+	}
+	cout <<"}";
+}
+void najveci(int A[], int a ){
+	
+
+	for(int i = 0;i < a; ++i) {
+
+   
+    if(A[0] < A[i])
+      A[0] = A[i];
+  }
+
+  cout << endl << "Najveci clan niza je: " << A[0];
+}
+void prosjek(int A[], int a ){
+	int suma = 0; 
+	double ar ; 
+	
+	for(int i = 0;i < a; i++ ) {
+		
+    suma+= A[i];
+    
+  }
+  	cout<<"suma"<<suma; 
+	ar= suma/a; 
+	cout <<"\nAritmeticka sredina je: "<<ar; 
+	
+}
+int main()
+{
+	
+	 
+	int B[0], b;
+	cout<<"Unesite broj clanova niza: "; 
+	cin>>b; 
+	unosNiza(B , b); 
+	ispisNiza(B, b);
+	ispisObrnuto(B,b);
+	najveci(B,b);
+	prosjek(B,b);
+	return 0; 
+	
+}
