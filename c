@@ -40,7 +40,21 @@ void najveci(int A[]){
       A[0] = A[i];
   }
 
-  cout << endl << "Najveci clan niza je:  " << A[0];
+  cout << endl << "Najveci clan niza je: " << A[0];
+}
+void prosjek(int A[]){
+	int suma = 0; 
+	double ar ; 
+	size_t n = sizeof(A)/sizeof(A[0]);
+	for(size_t i = 0;i < n; i++ ) {
+		
+    suma+= A[i];
+    
+  }
+  	cout<<"suma"<<suma; 
+	ar= suma/n; 
+	cout <<"\nAritmeticka sredina je: "<<ar; 
+	
 }
 int main()
 {
@@ -51,6 +65,7 @@ int main()
 	ispisNiza(B);
 	ispisObrnuto(B);
 	najveci(B);
+	prosjek(B);
 	return 0; 
 	
 }
